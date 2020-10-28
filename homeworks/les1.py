@@ -1,14 +1,27 @@
 """
-Поработайте с переменными, создайте несколько, выведите на экран,
+1.Поработайте с переменными, создайте несколько, выведите на экран,
 запросите у пользователя несколько чисел и строк и сохраните в переменные, выведите на экран.
 """
-variable_str = "Привет!"
-variable_int = 10
-variable_float = 15.5
-print(variable_str)
-print(variable_int)
-print(variable_float)
-user_name = input('Введите ваше имя\n>>>')
-user_surname = input('Введите вашу фамилию\n>>>')
-user_age = input("Введите ваш возраст\n>>>")
-print('Привет, {0} {1}! Ваш возраст {2}'.format(user_name, user_surname, user_age))
+#variable_str = "Привет!"
+#variable_int = 10
+#variable_float = 15.5
+#print(variable_str)
+#print(variable_int)
+#print(variable_float)
+#user_name = input('Введите ваше имя\n>>>')
+#user_surname = input('Введите вашу фамилию\n>>>')
+#user_age = input("Введите ваш возраст\n>>>")
+#print('Привет, {0} {1}! Ваш возраст {2}'.format(user_name, user_surname, user_age))
+"""
+2. Пользователь вводит время в секундах. Переведите время в часы, минуты и секунды 
+и выведите в формате чч:мм:сс. Используйте форматирование строк.
+"""
+#time = int(input('Введите время в секундах\n>>>'))
+#hour = time // 3600
+#minute = (time - hour * 3600) // 60
+#second = time - minute * 60 - hour * 3600
+#print('Время {0}:{1}:{2}'.format(hour, minute, second))
+"""
+3. Узнайте у пользователя число n. Найдите сумму чисел n + nn + nnn. 
+Например, пользователь ввёл число 3. Считаем 3 + 33 + 333 = 369.
+"""
