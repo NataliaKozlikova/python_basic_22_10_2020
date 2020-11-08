@@ -7,6 +7,7 @@
 Результат: [23, 1, 3, 10, 4, 11]
 """
 
+
 my_list = [4, 6, 4, 76, -3, 3, 5, 9, 65, 100, 5, 9]
 result = [itm for itm in my_list if my_list.count(itm) == 1]
 print(result)

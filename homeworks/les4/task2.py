@@ -7,7 +7,6 @@
 Результат: [12, 44, 4, 10, 78, 123].
 """
 
-
 my_list = [-3, 5, 8, 10, 250, 2, 87, 54, -4]
 result = [itm for idx, itm in enumerate(my_list) if idx and itm > my_list[idx - 1]]
 print(result)

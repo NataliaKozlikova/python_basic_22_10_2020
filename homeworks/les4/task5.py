@@ -5,6 +5,7 @@
 Подсказка: использовать функцию reduce().
 """
 
+
 from functools import reduce
 
 my_list = [itm for itm in range(100, 1001) if itm % 2 == 0]
