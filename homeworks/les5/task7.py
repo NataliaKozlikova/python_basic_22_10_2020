@@ -14,3 +14,27 @@
 
 Подсказка: использовать менеджеры контекста.
 """
+
+import os
+import json
+
+file_path = os.path.join(os.path.dirname(__file__), 'task7.txt')
+list_profit = []
+dict_profit = {}
+idx = 0
+count = 0
+
+with open(file_path, 'r', encoding='UTF-8') as file:
+    for line in file:
+        my_line = line.split(' ')
+        list_profit.append(int(my_line[2]) - int(my_line[3]))
+        dict_profit[my_line[0]] = list_profit[idx]
+        if list_profit[idx] > 0:
+            count += 1
+        sum_profit = sum(itm for itm in list_profit if itm > 0)
+        idx += 1
+
+    my_list = [dict_profit, {'average_profit': sum_profit / count}]
+
+with open('task7.json', 'w') as write_file:
+    json.dump(my_list, write_file)
