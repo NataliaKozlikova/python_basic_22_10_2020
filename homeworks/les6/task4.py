@@ -10,27 +10,24 @@ is_police (булево). А также методы: go, stop, turn(direction),
 """
 
 
-def go():
-    print('Машина поехала')
-
-
-def stop():
-    print('Машина остановилась')
-
-
-def turn(direction):
-    if direction in ('Направо', 'Налево'):
-        print(f'Машина повернула {direction}')
-    else:
-        raise ValueError('Направление движения только направо или налево')
-
-
 class Car:
     def __init__(self, color: str, name: str, is_police: bool = False):
         self.speed = 0
         self.color = color
         self.name = name
         self.is_police = is_police
+
+    def go(self):
+        print('Машина поехала')
+
+    def stop(self):
+        print('Машина остановилась')
+
+    def turn(self, direction):
+        if direction in ('Направо', 'Налево'):
+            print(f'Машина повернула {direction}')
+        else:
+            raise ValueError('Направление движения только направо или налево')
 
     def show_speed(self):
         print(f'{self.speed} км.ч')
@@ -69,6 +66,7 @@ class PoliceCar(Car):
 if __name__ == '__main__':
     a = TownCar('Черный', 'Ford')
     a.speed = 70
-    print(a.color, a.name, a.show_speed())
+    print(a.color, a.name)
+    a.show_speed()
     b = PoliceCar('Синий', 'Тойота', False)
     print(b.color, b.name)

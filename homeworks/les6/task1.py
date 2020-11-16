@@ -51,4 +51,5 @@ if __name__ == '__main__':
     for idx, light in cycle(enumerate(lighter.running(), 1)):
         print(idx, light)
         time.sleep(0.1)
-        if idx > 6: break
+        if idx == 6:
+            break
